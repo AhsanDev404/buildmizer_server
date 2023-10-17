@@ -3,13 +3,13 @@ import Product from "../models/productModel.js";
 import ErrorHandler from "../utils/errorHandler.js";
 
 export const createProduct = catchAsyncError(async (req, res, next) => {
-  const { title, price , category } = req.body;
+  const { title, price, category } = req.body;
   if (!req.file) {
     return next(new ErrorHandler(400, "Please upload an image."));
   }
   const imageUrl = req.file.path;
 
-  const product = await Product.create({ title, price, imageUrl,category });
+  const product = await Product.create({ title, price, imageUrl, category });
 
   if (!product) {
     return next(new ErrorHandler(401, "Product not created"));
@@ -42,7 +42,7 @@ export const deleteProduct = catchAsyncError(async (req, res, next) => {
 export const updateProduct = catchAsyncError(async (req, res, next) => {
   const productId = req.params.id; // Assuming the product ID is passed in the request parameters
 
-  const { title, price,category } = req.body;
+  const { title, price, category } = req.body;
   let imageUrl;
 
   if (req.file) {
@@ -79,7 +79,6 @@ export const updateProduct = catchAsyncError(async (req, res, next) => {
   });
 });
 
-
 export const getProduct = catchAsyncError(async (req, res, next) => {
   const productId = req.params.id; // Assuming the product ID is passed in the request parameters
 
@@ -95,7 +94,6 @@ export const getProduct = catchAsyncError(async (req, res, next) => {
   });
 });
 
-
 export const getProducts = catchAsyncError(async (req, res, next) => {
   const products = await Product.find();
 
@@ -105,4 +103,3 @@ export const getProducts = catchAsyncError(async (req, res, next) => {
     products,
   });
 });
-

@@ -1,4 +1,3 @@
-
 import ErrorHandler from "../utils/errorHandler.js";
 import catchAsyncError from "./../middlewares/catchAsyncError.js";
 import User from "./../models/userModel.js";

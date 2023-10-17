@@ -13,13 +13,13 @@ const productSchema = new mongoose.Schema(
     imageUrl: {
       type: String,
     },
-    category:{
-        type:String
-    }
+    category: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
 
-const Product  = mongoose.model('Product',productSchema)
+const Product = mongoose.model("Product", productSchema);
 
-export default Product
+export default Product;

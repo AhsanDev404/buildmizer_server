@@ -1,6 +1,6 @@
 import ErrorHandler from "../utils/errorHandler.js";
 
-// calling this middleware always in the end of the app 
+// calling this middleware always in the end of the app
 const errorMiddleware = (err, req, res, next) => {
   // handle almost every type of error
   err.statusCode = err.statusCode || 500;

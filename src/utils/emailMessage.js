@@ -1,5 +1,5 @@
 export const forgetPasswordEmailMessage = (resetUrl) => {
-    return `<div>
+  return `<div>
     <div style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
     <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 6px; padding: 20px;">
       <h2 style="text-align: center; color: #007bff;">Email Verification</h2>
@@ -10,10 +10,10 @@ export const forgetPasswordEmailMessage = (resetUrl) => {
     </div>
   </div>
   </div>`;
-  };
-  
-  export const verifyEmailMessage = (verifyUrl) => {
-    return `<div>
+};
+
+export const verifyEmailMessage = (verifyUrl) => {
+  return `<div>
     <div style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
     <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 6px; padding: 20px;">
       <h2 style="text-align: center; color: #007bff;">Email Verification</h2>
@@ -24,4 +24,4 @@ export const forgetPasswordEmailMessage = (resetUrl) => {
     </div>
   </div>
   </div>`;
-  };
+};

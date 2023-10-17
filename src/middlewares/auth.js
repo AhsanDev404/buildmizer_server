@@ -3,7 +3,7 @@ import ErrorHandler from "../utils/errorHandler.js";
 import catchAsyncError from "./catchAsyncError.js";
 import jwt from "jsonwebtoken";
 
-// middleware to check user is loggedIn or not 
+// middleware to check user is loggedIn or not
 export const isAuthenticate = catchAsyncError(async (req, res, next) => {
   const { token } = req.cookies;
   if (!token) {
@@ -14,15 +14,13 @@ export const isAuthenticate = catchAsyncError(async (req, res, next) => {
   next();
 });
 
-
 // middleware to check if the user email is verified or not
-export const isVerified = catchAsyncError(async (req, res, next) => {    
+export const isVerified = catchAsyncError(async (req, res, next) => {
   if (!req.user.verified) {
     return next(new ErrorHandler(401, "please Verified your Email"));
   }
   next();
 });
-
 
 // middle ware to access only for authorizedRoles only
 /**
