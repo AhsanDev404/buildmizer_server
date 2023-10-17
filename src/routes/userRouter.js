@@ -3,7 +3,6 @@ import express from "express";
 import {
   forgotPassword,
   getUserDetails,
-
   login,
   logout,
   register,
@@ -22,7 +21,6 @@ import { isVerified } from "../middlewares/auth.js";
 
 const userRouter = express.Router();
 // google authentication setup
-
 
 // local authentication setup
 userRouter.route("/register").post(registerValidation, register);
